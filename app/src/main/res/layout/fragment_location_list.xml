@@ -78,6 +78,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvLocations"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="3"
         tools:listitem="@layout/item_location"
         android:layout_width="match_parent"

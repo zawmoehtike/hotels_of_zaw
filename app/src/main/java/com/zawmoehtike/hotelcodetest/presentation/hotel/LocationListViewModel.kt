@@ -20,6 +20,8 @@ class LocationListViewModel @Inject constructor(
 
     fun getLocationsList(result: (ViewState<List<LocationModel>>) -> Unit) {
         viewModelScope.launch {
+            result(ViewState.Loading())
+
             val catcher = runCatching {
                 val data = getLocationsList.invoke(
                     lat = getLocationsListParams.lat,

@@ -1,6 +1,6 @@
 package com.zawmoehtike.hotelcodetest.common.di
 
-import com.onenex.yla.common.auth.AuthStoreProvider
+import com.zawmoehtike.hotelcodetest.common.auth.AuthStoreProvider
 import com.zawmoehtike.hotelcodetest.common.auth.AuthStoreProviderImpl
 import com.zawmoehtike.hotelcodetest.common.exception.ExceptionToStringMapper
 import com.zawmoehtike.hotelcodetest.common.exception.ExceptionToStringMapperImpl

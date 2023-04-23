@@ -2,8 +2,6 @@ package com.zawmoehtike.hotelcodetest.common.auth
 
 import android.content.Context
 import androidx.core.content.edit
-import com.onenex.yla.common.auth.AuthStoreProvider
-import com.onenex.yla.common.auth.AuthToken
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 

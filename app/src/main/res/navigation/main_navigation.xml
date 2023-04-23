@@ -42,7 +42,13 @@
         tools:layout="@layout/fragment_hotel_list">
         <action
             android:id="@+id/action_hotelListFragment_to_hotelDetailFragment"
-            app:destination="@id/hotelDetailFragment"/>
+            app:destination="@id/hotelDetailFragment">
+            <argument
+                app:nullable="false"
+                android:defaultValue=""
+                android:name="hotelId"
+                app:argType="string" />
+        </action>
         <action
             android:id="@+id/action_hotelListFragment_to_searchControlFragment"
             app:destination="@id/searchControlFragment"/>

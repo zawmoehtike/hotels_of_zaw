@@ -1,4 +1,4 @@
-package com.onenex.yla.common.auth
+package com.zawmoehtike.hotelcodetest.common.auth
 
 interface AuthStoreProvider {
     fun storeAuthToken(authToken: AuthToken)

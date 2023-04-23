@@ -9,7 +9,6 @@
     <ImageView
         android:id="@+id/ivLocation"
         android:src="@drawable/ic_location"
-        app:tint="@color/color_grey"
         android:layout_width="@dimen/image_size_small"
         android:layout_height="@dimen/image_size_small"
         app:layout_constraintStart_toStartOf="parent"

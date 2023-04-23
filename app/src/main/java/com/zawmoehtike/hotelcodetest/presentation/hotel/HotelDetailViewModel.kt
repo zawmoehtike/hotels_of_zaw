@@ -20,12 +20,14 @@ class HotelDetailViewModel @Inject constructor(
 
     fun getHotelDetails(result: (ViewState<HotelDetailsModel>) -> Unit) {
         viewModelScope.launch {
+            result(ViewState.Loading())
+
             val catcher = runCatching {
                 val data = getHotelDetails.invoke(
                     hotelId = getHotelDetailsParams.hotelId,
                     channel = getHotelDetailsParams.channelId,
-                    checkInDate = getHotelDetailsParams.checkInDate,
-                    checkOutDate = getHotelDetailsParams.checkOutDate
+                    checkInDate = "2023-04-25", //getHotelDetailsParams.checkInDate,
+                    checkOutDate = "2023-04-26", //getHotelDetailsParams.checkOutDate
                 )
 
                 result(ViewState.Success(data))
@@ -40,7 +42,7 @@ class HotelDetailViewModel @Inject constructor(
 
     data class GetHotelDetailsParams(
         var hotelId: String = "",
-        var channelId: String = "",
+        var channelId: String = "mobile",
         var checkInDate: String = "",
         var checkOutDate: String = ""
     )

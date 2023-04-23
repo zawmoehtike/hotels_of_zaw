@@ -1,7 +1,7 @@
 package com.zawmoehtike.hotelcodetest.data.di
 
-import com.onenex.yla.common.auth.AuthStoreProvider
-import com.onenex.yla.common.auth.AuthTokenInterceptor
+import com.zawmoehtike.hotelcodetest.common.auth.AuthStoreProvider
+import com.zawmoehtike.hotelcodetest.common.auth.AuthTokenInterceptor
 import com.squareup.moshi.Moshi
 import com.zawmoehtike.hotelcodetest.BuildConfig
 import com.zawmoehtike.hotelcodetest.data.remote.HotelApi
@@ -25,7 +25,7 @@ object RemoteModule {
     @Singleton
     fun provideAuthTokenInterceptor(
         authStoreProvider: AuthStoreProvider
-    ) : AuthTokenInterceptor{
+    ) : AuthTokenInterceptor {
         return AuthTokenInterceptor(authStoreProvider)
     }
 

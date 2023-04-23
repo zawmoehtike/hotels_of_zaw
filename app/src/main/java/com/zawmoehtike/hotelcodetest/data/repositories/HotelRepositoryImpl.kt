@@ -24,7 +24,12 @@ class HotelRepositoryImpl @Inject constructor(
             lat, long, provinceId, channel, checkInDate, checkOutDate, sdfsdf
         ).map {
             HotelModel(
-                id = (it.hotelsId?:0).toString()
+                id = (it.hotelsId?:0).toString(),
+                name = it.hotelName?:"",
+                description = it.city.toString().capitalize() + " • " + it.cityCenterDistance.toString(),
+                priceRange = it.priceRange?:"",
+                reviewCount = (it.reviews?:0).toString(),
+                imageUrl = it.imageCoverUrl?:""
             )
         }
 
@@ -39,7 +44,9 @@ class HotelRepositoryImpl @Inject constructor(
             lat, long
         ).map {
             LocationModel(
-                id = (it.id?:0).toString()
+                id = (it.id?:0).toString(),
+                title = it.name?:"",
+                subTitle = it.country?:""
             )
         }
 

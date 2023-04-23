@@ -20,12 +20,14 @@ class HotelListViewModel @Inject constructor(
 
     fun getHotelsList(result: (ViewState<List<HotelModel>>) -> Unit) {
         viewModelScope.launch {
+            result(ViewState.Loading())
+
             val catcher = runCatching {
                 val data = getHotelsList.invoke(
                     lat = getHotelsListParams.lat,
                     long = getHotelsListParams.long,
                     provinceId = "2", //getHotelsListParams.provinceId,
-                    channel = "mobile",
+                    channel = getHotelsListParams.channel,
                     checkInDate = "2023-04-25", //getHotelsListParams.checkInDate,
                     checkOutDate = "2023-04-26", //getHotelsListParams.checkOutDate,
                     sdfsdf = ""
@@ -45,7 +47,7 @@ class HotelListViewModel @Inject constructor(
         var lat: String = "",
         var long: String = "",
         var provinceId: String = "",
-        var channel: String = "",
+        var channel: String = "mobile",
         var checkInDate: String = "",
         var checkOutDate: String = ""
     )

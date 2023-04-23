@@ -58,7 +58,7 @@ data class GetHotelsListDto(
         @Json(name = "price_min")
         val priceMin: String?,
         @Json(name = "price_min_order")
-        val priceMinOrder: Any?,
+        val priceMinOrder: String?,
         @Json(name = "price_range")
         val priceRange: String?,
         @Json(name = "promote_label")
