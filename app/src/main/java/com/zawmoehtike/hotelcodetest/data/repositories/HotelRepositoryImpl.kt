@@ -5,6 +5,7 @@ import com.zawmoehtike.hotelcodetest.domain.models.HotelDetailsModel
 import com.zawmoehtike.hotelcodetest.domain.models.HotelModel
 import com.zawmoehtike.hotelcodetest.domain.models.LocationModel
 import com.zawmoehtike.hotelcodetest.domain.repositories.HotelRepository
+import kotlinx.coroutines.delay
 import javax.inject.Inject
 
 class HotelRepositoryImpl @Inject constructor(
@@ -64,7 +65,18 @@ class HotelRepositoryImpl @Inject constructor(
         )
 
         return HotelDetailsModel(
-            id = (data.hotelsId?:0).toString()
+            id = (data.hotelsId?:0).toString(),
+            imageUrl = data.imageCoverUrl?:"",
+            title = data.hotelName?:"",
+            description = data.provinceName?:"",
+            reviewCount = (data.numberOfReviews?:0).toString(),
+            priceRange = data.priceRange?:"",
+            checkInDate = "DD/MM",
+            checkOutDate = "DD/MM",
+            popularityScore = data.popularityScore?:"",
+            facilitiesList = data.popularFacilities?.map {
+                it.caption?:""
+            }?: emptyList()
         )
     }
 

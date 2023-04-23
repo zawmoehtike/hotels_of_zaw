@@ -27,265 +27,285 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivHotel"
-        android:src="@drawable/img_hotel"
-        android:scaleType="centerCrop"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/hotel_detail_image_height"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolBar"/>
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvTitle"
-        tools:text="Bangkok Hotel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/SourceSansProSemiBold.Large"
-        android:textColor="@color/black"
-        android:layout_marginTop="@dimen/margin_padding_small"
-        android:layout_marginStart="@dimen/margin_padding_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivHotel"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvSubTitle"
-        tools:text="Bangkok Hotel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/SourceSansProSemiBold.Medium"
-        android:textColor="@color/color_grey"
-        android:layout_marginTop="@dimen/margin_padding_tiny"
-        android:layout_marginStart="@dimen/margin_padding_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
-
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:progressTint="@color/color_gold"
-        android:scaleX="0.50"
-        android:scaleY="0.50"
-        android:numStars="5"
-        android:rating="3"
-        app:layout_constraintTop_toBottomOf="@id/ivHotel"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <View
-        android:id="@+id/viewLine1"
-        android:layout_width="match_parent"
-        android:layout_height="0.25dp"
-        android:background="@color/color_pale_grey"
-        android:layout_marginTop="@dimen/margin_padding_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvSubTitle"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvPriceRangeLabel"
-        tools:text="Price Range"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/SourceSansProLight.Medium"
-        android:textColor="@color/color_blue_green"
-        android:layout_marginTop="@dimen/margin_padding_small"
-        android:layout_marginStart="@dimen/margin_padding_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewLine1"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvPrice"
-        tools:text="$16 - $20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/SourceSansProSemiBold.Medium"
-        android:textColor="@color/black"
-        android:layout_marginTop="@dimen/margin_padding_small"
-        app:layout_constraintStart_toStartOf="@id/tvPriceRangeLabel"
-        app:layout_constraintTop_toBottomOf="@id/tvPriceRangeLabel"/>
-
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chipLove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:chipIconTint="@color/color_blue_green"
-        app:chipMinHeight="@dimen/chip_height"
-        app:chipIconSize="@dimen/chip_icon_size"
-        app:chipBackgroundColor="@color/color_pale_blue_green"
-        app:chipIcon="@drawable/ic_fav_border"
-        app:chipStartPadding="@dimen/margin_padding_medium"
-        android:layout_marginEnd="@dimen/margin_padding_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/tvPrice"
-        app:layout_constraintTop_toTopOf="@id/tvPriceRangeLabel"/>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutCheckInCheckOutSelectRoom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/color_pale_blue_green"
-        android:padding="@dimen/margin_padding_medium"
-        android:layout_marginTop="@dimen/margin_padding_medium"
-        app:layout_constraintTop_toBottomOf="@id/tvPrice">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardCheckInCheckOutSelectRoom"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:cardElevation="0dp"
-            app:cardCornerRadius="@dimen/margin_padding_medium">
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHotel"
+                android:src="@drawable/img_hotel"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hotel_detail_image_height"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                tools:text="Bangkok Hotel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProSemiBold.Large"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_padding_small"
+                android:layout_marginStart="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ratingBar"
+                app:layout_constraintTop_toBottomOf="@id/ivHotel"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSubTitle"
+                tools:text="Bangkok Hotel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProSemiBold.Medium"
+                android:textColor="@color/color_grey"
+                android:layout_marginTop="@dimen/margin_padding_tiny"
+                android:layout_marginStart="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:progressTint="@color/color_gold"
+                android:scaleX="0.50"
+                android:scaleY="0.50"
+                android:numStars="5"
+                tools:rating="3"
+                app:layout_constraintTop_toBottomOf="@id/ivHotel"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/viewLine1"
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:background="@color/color_pale_grey"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSubTitle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPriceRangeLabel"
+                tools:text="Price Range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProLight.Medium"
+                android:textColor="@color/color_blue_green"
+                android:layout_marginTop="@dimen/margin_padding_small"
+                android:layout_marginStart="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewLine1"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPrice"
+                tools:text="$16 - $20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProSemiBold.Medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_padding_small"
+                app:layout_constraintStart_toStartOf="@id/tvPriceRangeLabel"
+                app:layout_constraintTop_toBottomOf="@id/tvPriceRangeLabel"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipLove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipIconTint="@color/color_blue_green"
+                app:chipStrokeColor="@color/color_pale_blue_green"
+                app:chipMinHeight="@dimen/chip_height"
+                app:chipIconSize="@dimen/chip_icon_size"
+                app:chipBackgroundColor="@color/color_pale_blue_green"
+                app:chipIcon="@drawable/ic_fav_border"
+                app:chipStartPadding="@dimen/margin_padding_medium"
+                android:layout_marginEnd="@dimen/margin_padding_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tvPrice"
+                app:layout_constraintTop_toTopOf="@id/tvPriceRangeLabel"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutCheckInCheckOutSelectRoom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/margin_padding_medium">
+                android:background="@color/color_pale_blue_green"
+                android:padding="@dimen/margin_padding_medium"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice">
 
-                <TextView
-                    android:id="@+id/tvCheckInLabel"
-                    android:text="Check-in"
-                    style="@style/SourceSansProLight.Medium"
-                    android:textColor="@color/color_grey"
-                    android:layout_width="wrap_content"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCheckInCheckOutSelectRoom"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="@dimen/margin_padding_medium">
 
-                <TextView
-                    android:id="@+id/tvCheckIn"
-                    tools:text="21/Dec"
-                    style="@style/SourceSansProSemiBold.XLarge"
-                    android:textColor="@color/color_blue_green"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_padding_tiny"
-                    app:layout_constraintTop_toBottomOf="@id/tvCheckInLabel"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_padding_medium">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivTo"
-                    android:src="@drawable/ic_to"
-                    android:tint="@color/color_blue_green"
-                    android:layout_width="@dimen/image_size_small"
-                    android:layout_height="@dimen/image_size_small"
-                    android:layout_marginStart="@dimen/margin_padding_medium"
-                    app:layout_constraintStart_toEndOf="@id/tvCheckIn"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                        <TextView
+                            android:id="@+id/tvCheckInLabel"
+                            android:text="Check-in"
+                            style="@style/SourceSansProLight.Medium"
+                            android:textColor="@color/color_grey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
 
-                <TextView
-                    android:id="@+id/tvCheckOutLabel"
-                    android:text="Check-out"
-                    style="@style/SourceSansProLight.Medium"
-                    android:textColor="@color/color_grey"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_padding_medium"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/ivTo"/>
+                        <TextView
+                            android:id="@+id/tvCheckIn"
+                            android:text="21/Dec"
+                            style="@style/SourceSansProSemiBold.Medium"
+                            android:textColor="@color/color_blue_green"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_padding_tiny"
+                            app:layout_constraintTop_toBottomOf="@id/tvCheckInLabel"
+                            app:layout_constraintStart_toStartOf="parent"/>
 
-                <TextView
-                    android:id="@+id/tvCheckOut"
-                    tools:text="21/Dec"
-                    style="@style/SourceSansProSemiBold.XLarge"
-                    android:textColor="@color/color_blue_green"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_padding_tiny"
-                    app:layout_constraintTop_toBottomOf="@id/tvCheckOutLabel"
-                    app:layout_constraintStart_toStartOf="@id/tvCheckOutLabel"/>
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivTo"
+                            android:src="@drawable/ic_to"
+                            android:tint="@color/color_blue_green"
+                            android:layout_width="@dimen/image_size_small"
+                            android:layout_height="@dimen/image_size_small"
+                            android:layout_marginStart="@dimen/margin_padding_medium"
+                            app:layout_constraintStart_toEndOf="@id/tvCheckInLabel"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnSelectRooms"
-                    android:text="Select Rooms"
-                    android:paddingStart="@dimen/margin_padding_medium"
-                    android:paddingEnd="@dimen/margin_padding_medium"
-                    style="@style/SourceSansProLight.Medium"
-                    android:textColor="@color/white"
-                    android:background="@drawable/bg_blue_green_button"
-                    android:textAllCaps="false"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_padding_medium"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/tvCheckOut"/>
+                        <TextView
+                            android:id="@+id/tvCheckOutLabel"
+                            android:text="Check-out"
+                            style="@style/SourceSansProLight.Medium"
+                            android:textColor="@color/color_grey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_padding_medium"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivTo"/>
+
+                        <TextView
+                            android:id="@+id/tvCheckOut"
+                            android:text="21/Dec"
+                            style="@style/SourceSansProSemiBold.Medium"
+                            android:textColor="@color/color_blue_green"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_padding_tiny"
+                            app:layout_constraintTop_toBottomOf="@id/tvCheckOutLabel"
+                            app:layout_constraintStart_toStartOf="@id/tvCheckOutLabel"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSelectRooms"
+                            android:text="Select\nRooms"
+                            android:paddingStart="@dimen/margin_padding_medium"
+                            android:paddingEnd="@dimen/margin_padding_medium"
+                            style="@style/SourceSansProLight.Medium"
+                            android:textColor="@color/white"
+                            android:background="@drawable/bg_blue_green_button"
+                            android:textAllCaps="false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_padding_medium"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tvCheckOutLabel"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.cardview.widget.CardView>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivScoreOrTopFacilities"
+                android:src="@drawable/ic_star_circle"
+                android:tint="@color/color_grey"
+                android:layout_width="@dimen/image_size_small_2x"
+                android:layout_height="@dimen/image_size_small_2x"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                android:layout_marginStart="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutCheckInCheckOutSelectRoom"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tvScoreOrTopFacilities"
+                android:text="Score / Top Facilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                style="@style/SourceSansProSemiBold.Medium"
+                android:layout_marginStart="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toEndOf="@id/ivScoreOrTopFacilities"
+                app:layout_constraintTop_toTopOf="@id/ivScoreOrTopFacilities"
+                app:layout_constraintBottom_toBottomOf="@id/ivScoreOrTopFacilities"/>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivScoreOrTopFacilities"
-        android:src="@drawable/ic_star_circle"
-        android:tint="@color/color_grey"
-        android:layout_width="@dimen/image_size_small_2x"
-        android:layout_height="@dimen/image_size_small_2x"
-        android:layout_marginTop="@dimen/margin_padding_medium"
-        android:layout_marginStart="@dimen/margin_padding_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutCheckInCheckOutSelectRoom"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivToMore"
+                android:src="@drawable/ic_to"
+                android:tint="@color/color_grey"
+                android:layout_width="@dimen/image_size_small"
+                android:layout_height="@dimen/image_size_small"
+                android:layout_marginEnd="@dimen/margin_padding_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivScoreOrTopFacilities"
+                app:layout_constraintBottom_toBottomOf="@id/ivScoreOrTopFacilities"/>
 
-    <TextView
-        android:id="@+id/tvScoreOrTopFacilities"
-        android:text="Score / Top Facilities"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        style="@style/SourceSansProSemiBold.Medium"
-        android:layout_marginStart="@dimen/margin_padding_medium"
-        app:layout_constraintStart_toEndOf="@id/ivScoreOrTopFacilities"
-        app:layout_constraintTop_toTopOf="@id/ivScoreOrTopFacilities"
-        app:layout_constraintBottom_toBottomOf="@id/ivScoreOrTopFacilities"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFacility"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_facility"
+                android:layout_marginTop="@dimen/margin_padding_large"
+                android:layout_marginStart="@dimen/margin_padding_large_3x"
+                app:layout_constraintTop_toBottomOf="@id/ivToMore"
+                app:layout_constraintStart_toStartOf="@id/tvScoreOrTopFacilities"
+                app:layout_constraintEnd_toEndOf="@id/ivToMore"/>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivToMore"
-        android:src="@drawable/ic_to"
-        android:tint="@color/color_grey"
-        android:layout_width="@dimen/image_size_small"
-        android:layout_height="@dimen/image_size_small"
-        android:layout_marginEnd="@dimen/margin_padding_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ivScoreOrTopFacilities"
-        app:layout_constraintBottom_toBottomOf="@id/ivScoreOrTopFacilities"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPopularityScore"
+                android:text="Popularity Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProLight.Medium"
+                android:textColor="@color/color_blue_green"
+                android:layout_marginBottom="@dimen/margin_padding_large_3x"
+                android:layout_marginStart="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/rvFacility"
+                app:layout_constraintTop_toTopOf="@id/rvFacility"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvFacility"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        tools:itemCount="5"
-        tools:listitem="@layout/item_facility"
-        android:layout_marginTop="@dimen/margin_padding_large"
-        android:layout_marginStart="@dimen/margin_padding_large_3x"
-        app:layout_constraintTop_toBottomOf="@id/ivToMore"
-        app:layout_constraintStart_toStartOf="@id/tvScoreOrTopFacilities"
-        app:layout_constraintEnd_toEndOf="@id/ivToMore"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPopularityScoreValue"
+                tools:text="0.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProSemiBold.XLarge"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_padding_small"
+                app:layout_constraintStart_toStartOf="@id/tvPopularityScore"
+                app:layout_constraintEnd_toEndOf="@id/tvPopularityScore"
+                app:layout_constraintTop_toBottomOf="@id/tvPopularityScore"/>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvPopularityScore"
-        tools:text="Popularity Score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/SourceSansProLight.Medium"
-        android:textColor="@color/color_blue_green"
-        android:layout_marginBottom="@dimen/margin_padding_large_3x"
-        android:layout_marginStart="@dimen/margin_padding_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/rvFacility"
-        app:layout_constraintTop_toTopOf="@id/rvFacility"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvPopularityScoreValue"
-        tools:text="0.0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/SourceSansProSemiBold.XLarge"
-        android:textColor="@color/black"
-        android:layout_marginTop="@dimen/margin_padding_small"
-        app:layout_constraintStart_toStartOf="@id/tvPopularityScore"
-        app:layout_constraintEnd_toEndOf="@id/tvPopularityScore"
-        app:layout_constraintTop_toBottomOf="@id/tvPopularityScore"/>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

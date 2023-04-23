@@ -37,9 +37,9 @@ data class GetHotelDetailsDto(
     @Json(name = "overview")
     val overview: String?,
     @Json(name = "pictures")
-    val pictures: List<Picture?>?,
+    val pictures: List<Picture>?,
     @Json(name = "popular_facilities")
-    val popularFacilities: List<PopularFacility?>?,
+    val popularFacilities: List<PopularFacility>?,
     @Json(name = "popularity_score")
     val popularityScore: String?,
     @Json(name = "price_range")
@@ -68,7 +68,7 @@ data class GetHotelDetailsDto(
         @Json(name = "caption")
         val caption: String?,
         @Json(name = "icon")
-        val icon: Any?
+        val icon: String?
     )
 
     @JsonClass(generateAdapter = true)
