@@ -1,16 +1,15 @@
 package com.zawmoehtike.hotelcodetest.presentation.auth
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.zawmoehtike.hotelcodetest.R
-import com.zawmoehtike.hotelcodetest.base.BaseFragment
+import com.zawmoehtike.hotelcodetest.common.base.BaseFragment
 import com.zawmoehtike.hotelcodetest.databinding.FragmentSignUpBinding
-import com.zawmoehtike.hotelcodetest.databinding.FragmentVerifyPhoneNumberBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SignUpFragment: BaseFragment<FragmentSignUpBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

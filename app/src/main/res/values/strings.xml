@@ -12,4 +12,11 @@
     <string name="_21_dec_2021">21-Dec-2021</string>
     <string name="search">Search</string>
     <string name="content_description">Content Description</string>
+
+    <string name="error_generic">Something went wrong.Try again later.</string>
+    <string name="error_no_internet">No internet connection.</string>
+    <string name="error_socket_timeout">Connection timeout.</string>
+    <string name="error_server_500">Server error occurs.Try again later.</string>
+    <string name="error_server_404">Server not found.</string>
+    <string name="error_http">Server error occurs.Try again later.</string>
 </resources>

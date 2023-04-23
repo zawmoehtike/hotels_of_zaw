@@ -1,16 +1,15 @@
 package com.zawmoehtike.hotelcodetest.presentation.hotel
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.zawmoehtike.hotelcodetest.R
-import com.zawmoehtike.hotelcodetest.base.BaseFragment
-import com.zawmoehtike.hotelcodetest.databinding.FragmentHotelListBinding
+import com.zawmoehtike.hotelcodetest.common.base.BaseFragment
 import com.zawmoehtike.hotelcodetest.databinding.FragmentSearchControlBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SearchControlFragment: BaseFragment<FragmentSearchControlBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

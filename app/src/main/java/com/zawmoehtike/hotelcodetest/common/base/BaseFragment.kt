@@ -1,4 +1,4 @@
-package com.zawmoehtike.hotelcodetest.base
+package com.zawmoehtike.hotelcodetest.common.base
 
 import android.os.Bundle
 import android.util.Log

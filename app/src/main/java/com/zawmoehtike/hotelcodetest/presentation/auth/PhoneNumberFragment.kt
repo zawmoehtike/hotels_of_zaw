@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.zawmoehtike.hotelcodetest.R
-import com.zawmoehtike.hotelcodetest.base.BaseFragment
+import com.zawmoehtike.hotelcodetest.common.base.BaseFragment
 import com.zawmoehtike.hotelcodetest.databinding.FragmentPhoneNumberBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PhoneNumberFragment : BaseFragment<FragmentPhoneNumberBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
