@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.hotel.SearchControlFragment"
+    android:background="@color/color_pale_blue_green">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolBar"
+        android:background="@drawable/bg_toolbar_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvToolbarTitle"
+            android:text="Stays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SourceSansProSemiBold.Large"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFoundCount"
+        android:text="@string/select_find_option_and_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SourceSansProSemiBold.Medium"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_padding_medium"
+        android:layout_marginStart="@dimen/margin_padding_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCheckInCheckOutSelectRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="@dimen/margin_padding_medium"
+        android:layout_margin="@dimen/margin_padding_medium"
+        app:layout_constraintTop_toBottomOf="@id/tvFoundCount">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_padding_medium">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:text="@string/find_a_place_to_stay_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProLight.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/option_1"
+                    style="@style/FilterChip.Style1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/option_2"
+                    style="@style/FilterChip.Style1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Property Name" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etLocation"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_location"
+                app:drawableTint="@color/color_blue_green"
+                android:hint="@string/near_by"
+                style="@style/SourceSansProSemiBold.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_black_edit_text"
+                android:padding="@dimen/margin_padding_medium"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintTop_toBottomOf="@id/chipGroup"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCheckInDate"
+                android:text="@string/check_in_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProLight.Medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etLocation"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDayCount"
+                tools:text="(1 night)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProLight.Medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etLocation"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCheckOutDate"
+                android:text="@string/check_out_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProLight.Medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etLocation"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutStartDateEndDate"
+                android:background="@drawable/bg_black_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_small"
+                android:padding="@dimen/margin_padding_medium"
+                app:layout_constraintTop_toBottomOf="@id/tvCheckInDate">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etStartDate"
+                    android:focusable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="@string/_21_dec_2021"
+                    style="@style/SourceSansProLight.Medium"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/ivDate"
+                    android:contentDescription="@string/content_description"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="@color/color_blue_green"
+                    android:layout_width="@dimen/image_size_small"
+                    android:layout_height="@dimen/image_size_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etEndDate"
+                    android:focusable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="@string/_21_dec_2021"
+                    style="@style/SourceSansProLight.Medium"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSearch"
+                android:text="@string/search"
+                android:textAllCaps="false"
+                style="@style/SourceSansProSemiBold.Medium"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_blue_green_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintTop_toBottomOf="@id/layoutStartDateEndDate"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

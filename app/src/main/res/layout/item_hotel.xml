@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/margin_padding_medium"
+    app:cardCornerRadius="@dimen/margin_padding_medium">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLocation"
+            android:src="@drawable/img_hotel"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hotel_image_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            tools:text="Bangkok Hotel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SourceSansProSemiBold.Large"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_padding_small"
+            android:layout_marginStart="@dimen/margin_padding_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivLocation"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubTitle"
+            tools:text="Bangkok Hotel * 1km from Bang Na"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SourceSansProSemiBold.Small"
+            android:textColor="@color/color_grey"
+            android:layout_marginTop="@dimen/margin_padding_tiny"
+            android:layout_marginStart="@dimen/margin_padding_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipLove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIconTint="@color/color_blue_green"
+            app:chipMinHeight="@dimen/chip_height"
+            app:chipIconSize="@dimen/chip_icon_size"
+            app:chipBackgroundColor="@color/color_pale_blue_green"
+            app:chipStrokeColor="@color/color_pale_blue_green"
+            app:chipIcon="@drawable/ic_fav_border"
+            app:chipStartPadding="@dimen/margin_padding_medium"
+            android:layout_marginTop="@dimen/margin_padding_small"
+            android:layout_marginBottom="@dimen/margin_padding_medium"
+            android:layout_marginStart="@dimen/margin_padding_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitle"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIconTint="@color/color_blue_green"
+            app:chipMinHeight="@dimen/chip_height"
+            app:chipIconSize="@dimen/chip_icon_size"
+            app:chipBackgroundColor="@color/color_pale_blue_green"
+            app:chipStrokeColor="@color/color_pale_blue_green"
+            app:chipIcon="@drawable/ic_message"
+            tools:text="0 Reviews"
+            android:textColor="@color/color_grey"
+            style="@style/SourceSansProSemiBold.Small"
+            app:chipStartPadding="@dimen/margin_padding_medium"
+            android:layout_marginTop="@dimen/margin_padding_small"
+            android:layout_marginBottom="@dimen/margin_padding_medium"
+            android:layout_marginStart="@dimen/margin_padding_small"
+            app:layout_constraintStart_toEndOf="@id/chipLove"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
+            tools:text="$16 - $20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SourceSansProSemiBold.Medium"
+            android:textColor="@color/black"
+            android:layout_marginEnd="@dimen/margin_padding_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/chipReview"
+            app:layout_constraintTop_toTopOf="@id/chipReview"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

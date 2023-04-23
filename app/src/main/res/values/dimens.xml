@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_padding_tiny">4dp</dimen>
+    <dimen name="margin_padding_small">8dp</dimen>
+    <dimen name="margin_padding_medium">16dp</dimen>
+    <dimen name="margin_padding_large">24dp</dimen>
+    <dimen name="margin_padding_large_2x">48dp</dimen>
+    <dimen name="margin_padding_large_3x">72dp</dimen>
+
+    <dimen name="chip_icon_size">16dp</dimen>
+    <dimen name="image_size_small">24dp</dimen>
+    <dimen name="image_size_small_2x">28dp</dimen>
+    <dimen name="image_size_medium">32dp</dimen>
+    <dimen name="hotel_image_height">140dp</dimen>
+    <dimen name="hotel_detail_image_height">220dp</dimen>
+    <dimen name="chip_height">40dp</dimen>
+</resources>

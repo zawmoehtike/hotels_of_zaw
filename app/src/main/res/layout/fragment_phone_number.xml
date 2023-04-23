@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.hotel.SearchControlFragment"
+    android:background="@color/color_pale_blue_green">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolBar"
+        android:background="@drawable/bg_toolbar_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvToolbarTitle"
+            android:text="Login / Sign Up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SourceSansProSemiBold.Large"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEnterPhoneNumber"
+        android:text="Enter your phone number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SourceSansProSemiBold.Medium"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_padding_medium"
+        android:layout_marginStart="@dimen/margin_padding_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCheckInCheckOutSelectRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="@dimen/margin_padding_medium"
+        android:layout_margin="@dimen/margin_padding_medium"
+        app:layout_constraintTop_toBottomOf="@id/tvEnterPhoneNumber">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_padding_medium">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_padding_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivCountryFlag"
+                    android:src="@drawable/ic_thai_flag"
+                    android:layout_width="@dimen/image_size_medium"
+                    android:layout_height="@dimen/image_size_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCountryFlag"
+                    android:text="+66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SourceSansProLight.Medium"
+                    android:textColor="@color/color_text_blue"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/margin_padding_small"
+                    app:layout_constraintStart_toEndOf="@id/ivCountryFlag"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPhoneNumber"
+                style="@style/SourceSansProSemiBold.Medium"
+                android:hint="Phone number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toEndOf="@id/layoutCountryCode"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/layoutCountryCode"
+                app:layout_constraintTop_toTopOf="@id/layoutCountryCode"/>
+
+            <View
+                android:id="@+id/viewLine1"
+                android:layout_width="0dp"
+                android:layout_height="0.25dp"
+                android:background="@color/color_pale_grey"
+                app:layout_constraintStart_toStartOf="@id/etPhoneNumber"
+                app:layout_constraintEnd_toEndOf="@id/etPhoneNumber"
+                app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNext"
+                android:text="Next"
+                android:textAllCaps="false"
+                style="@style/SourceSansProSemiBold.Medium"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_blue_green_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintTop_toBottomOf="@id/layoutCountryCode"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

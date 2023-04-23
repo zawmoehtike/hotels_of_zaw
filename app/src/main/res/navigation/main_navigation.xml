@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/phoneNumberFragment">
+
+    <fragment
+        android:id="@+id/phoneNumberFragment"
+        android:name="com.zawmoehtike.hotelcodetest.presentation.auth.PhoneNumberFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_phone_number">
+        <action
+            android:id="@+id/action_phoneNumberFragment_to_verifyPhoneNumberFragment"
+            app:destination="@id/verifyPhoneNumberFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.zawmoehtike.hotelcodetest.presentation.auth.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_hotelListFragment"
+            app:destination="@id/hotelListFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/verifyPhoneNumberFragment"
+        android:name="com.zawmoehtike.hotelcodetest.presentation.auth.VerifyPhoneNumberFragment"
+        android:label="Verify Phone Number"
+        tools:layout="@layout/fragment_verify_phone_number">
+        <action
+            android:id="@+id/action_verifyPhoneNumberFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/hotelListFragment"
+        android:name="com.zawmoehtike.hotelcodetest.presentation.hotel.HotelListFragment"
+        android:label="Hotels"
+        tools:layout="@layout/fragment_hotel_list">
+        <action
+            android:id="@+id/action_hotelListFragment_to_hotelDetailFragment"
+            app:destination="@id/hotelDetailFragment"/>
+        <action
+            android:id="@+id/action_hotelListFragment_to_searchControlFragment"
+            app:destination="@id/searchControlFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/hotelDetailFragment"
+        android:name="com.zawmoehtike.hotelcodetest.presentation.hotel.HotelDetailFragment"
+        android:label="Hotel Detail"
+        tools:layout="@layout/fragment_hotel_detail"/>
+
+    <fragment
+        android:id="@+id/searchControlFragment"
+        android:name="com.zawmoehtike.hotelcodetest.presentation.hotel.SearchControlFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search_control">
+        <action
+            android:id="@+id/action_searchControlFragment_to_locationListFragment"
+            app:destination="@id/locationListFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/locationListFragment"
+        android:name="com.zawmoehtike.hotelcodetest.presentation.hotel.LocationListFragment"
+        android:label="Locations"
+        tools:layout="@layout/fragment_location_list"/>
+
+</navigation>

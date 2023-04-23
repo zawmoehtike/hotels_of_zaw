@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SourceSansProSemiBold.XLarge" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/source_sans_pro_semi_bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="SourceSansProSemiBold.Large" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/source_sans_pro_semi_bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="SourceSansProSemiBold.Medium" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/source_sans_pro_semi_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SourceSansProSemiBold.Small" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/source_sans_pro_semi_bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="SourceSansProLight.XLarge" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/source_sans_pro_light</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="SourceSansProLight.Large" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/source_sans_pro_light</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="SourceSansProLight.Medium" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/source_sans_pro_light</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SourceSansProLight.Small" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/source_sans_pro_light</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="FilterChip.Style1" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_background_blue_green</item>
+        <item name="android:textColor">@color/chip_text_blue_green</item>
+        <item name="checkedIcon">@drawable/ic_mark_pale_blue_green</item>
+    </style>
+</resources>

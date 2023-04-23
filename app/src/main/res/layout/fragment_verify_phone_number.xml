@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.hotel.SearchControlFragment"
+    android:background="@color/color_pale_blue_green">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolBar"
+        android:background="@drawable/bg_toolbar_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvToolbarTitle"
+            android:text="Login / Sign Up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SourceSansProSemiBold.Large"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPhoneNumberVerification"
+        android:text="Phone Number Verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SourceSansProSemiBold.Medium"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_padding_medium"
+        android:layout_marginStart="@dimen/margin_padding_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCheckInCheckOutSelectRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="@dimen/margin_padding_medium"
+        android:layout_margin="@dimen/margin_padding_medium"
+        app:layout_constraintTop_toBottomOf="@id/tvPhoneNumberVerification">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_padding_medium">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSendToPhoneNumber"
+                android:text="Enter OTP sent to +66793120560"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProLight.Medium"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etOTP"
+                style="@style/SourceSansProLight.Medium"
+                android:hint="Enter OTP..."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_padding_medium"
+                tools:text="12345"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_padding_small"
+                app:layout_constraintTop_toBottomOf="@id/tvSendToPhoneNumber"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDidNotReceivedOTP"
+                android:text="Did not receive OTP?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProLight.Medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etOTP"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOK"
+                android:text="Verify"
+                tools:text="Retry in 119 sec"
+                android:textAllCaps="false"
+                style="@style/SourceSansProLight.Medium"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:enabled="false"
+                android:background="@drawable/button_blue_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintTop_toBottomOf="@id/tvDidNotReceivedOTP"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

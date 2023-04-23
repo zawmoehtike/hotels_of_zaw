@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_padding_tiny"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTip"
+        android:src="@drawable/ic_mark"
+        android:tint="@color/color_grey"
+        android:layout_width="@dimen/image_size_small"
+        android:layout_height="@dimen/image_size_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvFacility"
+        app:layout_constraintBottom_toBottomOf="@id/tvFacility"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFacility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Facility"
+        style="@style/SourceSansProLight.Medium"
+        android:layout_marginStart="@dimen/margin_padding_small"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivTip"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

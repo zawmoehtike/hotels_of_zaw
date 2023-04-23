@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">hotelcodetest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_find_option_and_date">Select find option and date</string>
+    <string name="find_a_place_to_stay_by">Find a place to stay by</string>
+    <string name="location">Location</string>
+    <string name="property_name">Property Name</string>
+    <string name="near_by">Near by</string>
+    <string name="check_in_date">Check-in Date</string>
+    <string name="check_out_date">Check-out Date</string>
+    <string name="_21_dec_2021">21-Dec-2021</string>
+    <string name="search">Search</string>
+    <string name="content_description">Content Description</string>
+</resources>

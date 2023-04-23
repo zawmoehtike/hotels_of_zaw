@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.auth.SignUpFragment"
+    android:background="@color/color_pale_blue_green">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolBar"
+        android:background="@drawable/bg_toolbar_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvToolbarTitle"
+            android:text="Login / Sign Up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SourceSansProSemiBold.Large"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPhoneNumberVerification"
+        android:text="Phone Number Verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SourceSansProSemiBold.Medium"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_padding_medium"
+        android:layout_marginStart="@dimen/margin_padding_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCheckInCheckOutSelectRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="@dimen/margin_padding_medium"
+        android:layout_margin="@dimen/margin_padding_medium"
+        app:layout_constraintTop_toBottomOf="@id/tvPhoneNumberVerification">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_padding_medium">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etPhoneNumberLayout"
+                app:hintTextColor="@color/textinputlayout_blue_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPhoneNumber"
+                    android:hint="Phone number"
+                    android:background="@android:color/transparent"
+                    style="@style/SourceSansProLight.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="+66793120560"
+                    android:layout_marginTop="@dimen/margin_padding_small" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/viewLine1"
+                android:layout_width="0dp"
+                android:layout_height="0.25dp"
+                android:background="@color/color_pale_grey"
+                app:layout_constraintStart_toStartOf="@id/etPhoneNumberLayout"
+                app:layout_constraintEnd_toEndOf="@id/etPhoneNumberLayout"
+                app:layout_constraintTop_toBottomOf="@id/etPhoneNumberLayout"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etFullNameLayout"
+                app:hintTextColor="@color/textinputlayout_blue_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintTop_toBottomOf="@id/etPhoneNumberLayout">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etFullName"
+                    android:background="@android:color/transparent"
+                    style="@style/SourceSansProLight.Medium"
+                    android:hint="Full name"
+                    tools:text="John D"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_padding_small"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/viewLine2"
+                android:layout_width="0dp"
+                android:layout_height="0.25dp"
+                android:background="@color/color_pale_grey"
+                app:layout_constraintStart_toStartOf="@id/etFullNameLayout"
+                app:layout_constraintEnd_toEndOf="@id/etFullNameLayout"
+                app:layout_constraintTop_toBottomOf="@id/etFullNameLayout"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etEmailLayout"
+                app:hintTextColor="@color/textinputlayout_blue_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintTop_toBottomOf="@id/etFullNameLayout">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etEmail"
+                    android:background="@android:color/transparent"
+                    style="@style/SourceSansProLight.Medium"
+                    android:hint="Email"
+                    tools:text="john.d@gmail.com"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_padding_small"
+                    app:layout_constraintTop_toBottomOf="@id/etFullName"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/viewLine3"
+                android:layout_width="0dp"
+                android:layout_height="0.25dp"
+                android:background="@color/color_pale_grey"
+                app:layout_constraintStart_toStartOf="@id/etEmailLayout"
+                app:layout_constraintEnd_toEndOf="@id/etEmailLayout"
+                app:layout_constraintTop_toBottomOf="@id/etEmailLayout"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTerms"
+                android:gravity="center"
+                android:text="By clicking the Sign Up button you accept\nto following Terms of Use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SourceSansProLight.Medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                android:layout_marginStart="@dimen/margin_padding_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etEmailLayout"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOK"
+                android:text="Accept and Sign Up"
+                android:textAllCaps="false"
+                style="@style/SourceSansProLight.Medium"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/button_blue_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_medium"
+                app:layout_constraintTop_toBottomOf="@id/tvTerms"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
