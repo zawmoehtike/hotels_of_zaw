@@ -11,8 +11,33 @@
         android:label="Sign In"
         tools:layout="@layout/fragment_phone_number">
         <action
+            android:id="@+id/action_phoneNumberFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment">
+            <argument
+                app:nullable="false"
+                android:defaultValue=""
+                android:name="countryCode"
+                app:argType="string" />
+            <argument
+                app:nullable="false"
+                android:defaultValue=""
+                android:name="phoneNumber"
+                app:argType="string" />
+        </action>
+        <action
             android:id="@+id/action_phoneNumberFragment_to_verifyPhoneNumberFragment"
-            app:destination="@id/verifyPhoneNumberFragment"/>
+            app:destination="@id/verifyPhoneNumberFragment">
+            <argument
+                app:nullable="false"
+                android:defaultValue=""
+                android:name="countryCode"
+                app:argType="string" />
+            <argument
+                app:nullable="false"
+                android:defaultValue=""
+                android:name="phoneNumber"
+                app:argType="string" />
+        </action>
     </fragment>
 
     <fragment
@@ -21,8 +46,19 @@
         android:label="Sign Up"
         tools:layout="@layout/fragment_sign_up">
         <action
-            android:id="@+id/action_signUpFragment_to_searchControlFragment"
-            app:destination="@id/searchControlFragment"/>
+            android:id="@+id/action_signUpFragment_to_verifyPhoneNumberFragment"
+            app:destination="@id/verifyPhoneNumberFragment">
+            <argument
+                app:nullable="false"
+                android:defaultValue=""
+                android:name="countryCode"
+                app:argType="string" />
+            <argument
+                app:nullable="false"
+                android:defaultValue=""
+                android:name="phoneNumber"
+                app:argType="string" />
+        </action>
     </fragment>
 
     <fragment
@@ -31,8 +67,8 @@
         android:label="Verify Phone Number"
         tools:layout="@layout/fragment_verify_phone_number">
         <action
-            android:id="@+id/action_verifyPhoneNumberFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment"/>
+            android:id="@+id/action_verifyPhoneNumberFragment_to_searchControlFragment"
+            app:destination="@id/searchControlFragment"/>
     </fragment>
 
     <fragment

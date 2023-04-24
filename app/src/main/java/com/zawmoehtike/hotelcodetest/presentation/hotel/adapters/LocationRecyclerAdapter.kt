@@ -58,7 +58,7 @@ class LocationRecyclerAdapter (private val onClick : (LocationModel) -> Unit):
                     tvSubTitle.text = item.subTitle
 
                     viewLocation.setOnClickListener {
-                        if(item.id != "0" || item.id != "-1") {
+                        if(item.id != "0" && item.id != "-1") {
                             onClick(item)
                         }
                     }

@@ -64,6 +64,7 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etPhoneNumber"
                     android:hint="Phone number"
+                    android:focusable="false"
                     android:background="@android:color/transparent"
                     style="@style/SourceSansProLight.Medium"
                     android:layout_width="match_parent"

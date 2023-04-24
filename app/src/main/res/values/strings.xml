@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">hotelcodetest</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="select_find_option_and_date">Select find option and date</string>
     <string name="find_a_place_to_stay_by">Find a place to stay by</string>
