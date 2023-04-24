@@ -26,10 +26,10 @@ class HotelListViewModel @Inject constructor(
                 val data = getHotelsList.invoke(
                     lat = getHotelsListParams.lat,
                     long = getHotelsListParams.long,
-                    provinceId = "2", //getHotelsListParams.provinceId,
+                    provinceId = getHotelsListParams.provinceId, //getHotelsListParams.provinceId,
                     channel = getHotelsListParams.channel,
-                    checkInDate = "2023-04-25", //getHotelsListParams.checkInDate,
-                    checkOutDate = "2023-04-26", //getHotelsListParams.checkOutDate,
+                    checkInDate = getHotelsListParams.checkInDate, //getHotelsListParams.checkInDate,
+                    checkOutDate = getHotelsListParams.checkOutDate, //getHotelsListParams.checkOutDate,
                     sdfsdf = ""
                 )
 

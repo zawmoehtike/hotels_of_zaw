@@ -38,11 +38,16 @@ class HotelListFragment: BaseFragment<FragmentHotelListBinding>() {
 
         binding.rvHotels.adapter = adapter
 
+        viewModel.getHotelsListParams.provinceId = requireArguments().getString("provinceId", "")
+        viewModel.getHotelsListParams.checkInDate = requireArguments().getString("startDate", "")
+        viewModel.getHotelsListParams.checkOutDate = requireArguments().getString("endDate", "")
         viewModel.getHotelsList { state ->
             when(state) {
                 is ViewState.Success -> {
                     alertDialog?.dismiss()
                     adapter.submitList(state.value)
+
+                    binding.tvFoundCount.text = "${state.value.size} properties found"
                 }
                 is ViewState.Error -> {
                     alertDialog?.dismiss()
@@ -58,7 +63,7 @@ class HotelListFragment: BaseFragment<FragmentHotelListBinding>() {
         }
 
         binding.ivFilter.setOnClickListener {
-            findNavController().navigate(R.id.action_hotelListFragment_to_searchControlFragment)
+            findNavController().popBackStack()
         }
     }
 

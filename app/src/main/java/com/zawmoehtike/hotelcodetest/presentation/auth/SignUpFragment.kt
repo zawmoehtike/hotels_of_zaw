@@ -16,7 +16,7 @@ class SignUpFragment: BaseFragment<FragmentSignUpBinding>() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnOK.setOnClickListener {
-            findNavController().navigate(R.id.action_signUpFragment_to_hotelListFragment)
+            findNavController().navigate(R.id.action_signUpFragment_to_searchControlFragment)
         }
     }
 

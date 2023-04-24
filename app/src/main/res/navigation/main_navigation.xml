@@ -21,8 +21,8 @@
         android:label="Sign Up"
         tools:layout="@layout/fragment_sign_up">
         <action
-            android:id="@+id/action_signUpFragment_to_hotelListFragment"
-            app:destination="@id/hotelListFragment"/>
+            android:id="@+id/action_signUpFragment_to_searchControlFragment"
+            app:destination="@id/searchControlFragment"/>
     </fragment>
 
     <fragment
@@ -49,9 +49,6 @@
                 android:name="hotelId"
                 app:argType="string" />
         </action>
-        <action
-            android:id="@+id/action_hotelListFragment_to_searchControlFragment"
-            app:destination="@id/searchControlFragment"/>
     </fragment>
 
     <fragment
@@ -68,6 +65,25 @@
         <action
             android:id="@+id/action_searchControlFragment_to_locationListFragment"
             app:destination="@id/locationListFragment"/>
+        <action
+            android:id="@+id/action_searchControlFragment_to_hotelListFragment"
+            app:destination="@id/hotelListFragment">
+            <argument
+                app:nullable="false"
+                android:defaultValue=""
+                android:name="provinceId"
+                app:argType="string" />
+            <argument
+                app:nullable="false"
+                android:defaultValue=""
+                android:name="startDate"
+                app:argType="string" />
+            <argument
+                app:nullable="false"
+                android:defaultValue=""
+                android:name="endDate"
+                app:argType="string" />
+        </action>
     </fragment>
 
     <fragment

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.zawmoehtike.hotelcodetest.common.base.BaseFragment
 import com.zawmoehtike.hotelcodetest.common.base.ViewState
 import com.zawmoehtike.hotelcodetest.databinding.FragmentLocationListBinding
@@ -23,7 +24,8 @@ class LocationListFragment: BaseFragment<FragmentLocationListBinding>() {
     private val adapter by lazy {
         LocationRecyclerAdapter(
             onClick = {
-
+                findNavController().previousBackStackEntry?.savedStateHandle?.set("location", it)
+                findNavController().popBackStack()
             }
         )
     }

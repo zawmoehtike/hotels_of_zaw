@@ -37,7 +37,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvFoundCount"
-            android:text="82 properties found"
+            tools:text="82 properties found"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/SourceSansProSemiBold.Medium"
